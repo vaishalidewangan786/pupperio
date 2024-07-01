@@ -1,0 +1,203 @@
+{
+    "uid":"",
+    "scriptName":"Login-By-Shivam",
+    "timeOfInvocation": "Sat Mar 02 2024 12:28:57 GMT+0530",
+    "globalDefinitions":[
+        {"name":"observation",
+            "type":"param",
+            "defautlValue":null
+        },
+        {"name":"balance",
+            "type":"param",
+            "defautlValue":null
+        }
+    ],
+    "train":[
+        {
+            "order":0,
+            "type":"status",
+            "requestType":"GET",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+
+            }
+        },
+        {
+            "order":1,
+            "type":"init",
+            "requestType":"GET",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+
+            }
+        },
+        {
+            "order":2,
+            "type":"goto",
+            "requestType":"POST",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+                "timeout": 10000,
+                "retries":3,
+                "link":"https://www.programiz.com/javascript/online-compiler/",
+                "waitForSelector":".desktop-run-button"
+            }
+        },
+        {
+            "order":3,
+            "type":"screenshot",
+            "requestType":"GET",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+
+            }
+        },
+        {
+            "order":4,
+            "type":"new-tab",
+            "requestType":"GET",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+
+            }
+        },
+        {
+            "order":5,
+            "type":"switch-tab",
+            "requestType":"POST",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+                "tabIndex":0
+            }
+        },
+        {
+            "order":6,
+            "type":"click",
+            "requestType":"POST",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+                "selector":".desktop-run-button"
+            }
+        },
+        {
+            "order":7,
+            "type":"type",
+            "requestType":"POST",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+                "selector":".ace_text-input",
+                "data":"console.log('Hello Shivam!');"
+            }
+        },
+        {
+            "order":8,
+            "type":"cheerio-scrape",
+            "requestType":"POST",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+                "selector": "#terminal",
+                "type": "next"
+            }
+        },
+        {
+            "order":9,
+            "type":"close-current-tab",
+            "requestType":"DELETE",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+
+            }
+        },
+        {
+            "order":10,
+            "type":"close-browser",
+            "requestType":"DELETE",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+
+            }
+        },
+        {
+            "order":11,
+            "type":"loop-until",
+            "requestType":"POST",
+            "delayBeforeNextExecution":5000,
+            "reqParams":{
+
+            },
+            "reqBody":{
+                "metro":[
+                    {
+                        "order":0,
+                        "type":"status",
+                        "requestType":"GET",
+                        "delayBeforeNextExecution":5000,
+                        "reqParams":{
+            
+                        },
+                        "reqBody":{
+            
+                        }
+                    },
+                    {
+                        "order":1,
+                        "type":"init",
+                        "requestType":"GET",
+                        "delayBeforeNextExecution":5000,
+                        "reqParams":{
+            
+                        },
+                        "reqBody":{
+            
+                        }
+                    },
+                    {
+                        "order":2,
+                        "type":"close-browser",
+                        "requestType":"DELETE",
+                        "delayBeforeNextExecution":5000,
+                        "reqParams":{
+            
+                        },
+                        "reqBody":{
+            
+                        }
+                    }                
+                ]
+            }
+        }
+    ]
+}
